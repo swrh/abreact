@@ -1,5 +1,5 @@
 {
-  "name": "abreact",
+  "name": "abreaction",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swrh/abreact.git"
+    "url": "git+https://github.com/swrh/abreaction.git"
   },
   "author": "Fernando Silveira <fsilveira@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/swrh/abreact/issues"
+    "url": "https://github.com/swrh/abreaction/issues"
   },
-  "homepage": "https://github.com/swrh/abreact#readme",
+  "homepage": "https://github.com/swrh/abreaction#readme",
   "devDependencies": {
     "parcel": "^2.2.1"
   }
