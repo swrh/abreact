@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/swrh/abreact/issues"
   },
-  "homepage": "https://github.com/swrh/abreact#readme"
+  "homepage": "https://github.com/swrh/abreact#readme",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
 }
