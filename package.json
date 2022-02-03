@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/swrh/abreaction#readme",
   "devDependencies": {
+    "jest": "^27.4.7",
     "parcel": "^2.2.1"
   }
 }
