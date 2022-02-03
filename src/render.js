@@ -1,3 +1,5 @@
+import { createRootElement } from './create-element'
+
 const renderText = (text, container) => {
     const textNode = document.createTextNode(text)
     container.appendChild(textNode)
@@ -17,10 +19,20 @@ const renderElement = (element, container) => {
     container.appendChild(domElement)
 }
 
+let rootContainer = null
+
 export const render = (object, container) => {
+    if (rootContainer === null) {
+        rootContainer = container
+    }
     if (['string', 'number'].includes(typeof (object))) {
         renderText(object, container)
     } else {
         renderElement(object, container)
     }
+}
+
+export const rerender = () => {
+    rootContainer.firstChild.remove()
+    render(createRootElement(), rootContainer)
 }

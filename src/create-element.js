@@ -1,4 +1,9 @@
-export const createElement = (object, props, ...children) => {
+let createRootElementArguments = null
+
+export function createElement(object, props, ...children) {
+    if (createRootElementArguments === null) {
+        createRootElementArguments = arguments
+    }
     if (typeof (object) === 'function') {
         return object(props)
     }
@@ -10,4 +15,8 @@ export const createElement = (object, props, ...children) => {
         },
     }
     return element
+}
+
+export const createRootElement = () => {
+    return createElement(...createRootElementArguments)
 }

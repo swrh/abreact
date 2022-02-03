@@ -1,7 +1,12 @@
-import React from './react'
+import React, { useState } from './react'
 
 const App = () => {
-    return <h1>Hello, world!</h1>
+    const [name, setName] = useState('world')
+
+    return <div>
+        <h1>Hello, {name}!</h1>
+        <input value={name} onchange={(e) => setName(e.target.value)} />
+    </div>
 }
 
 export default App
