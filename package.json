@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/swrh/abreaction#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.16.8",
     "jest": "^27.4.7",
     "parcel": "^2.2.1"
   }
