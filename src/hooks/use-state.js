@@ -1,14 +1,19 @@
 import { rerender } from '../render'
 
-let state = undefined
+const state = []
+let stateCursor = 0
 
 export const useState = (initialState) => {
-    if (state === undefined) {
-        state = initialState
+    const CURSOR = stateCursor++
+    if (state[CURSOR] === undefined) {
+        state[CURSOR] = initialState
     }
     const setState = (newState) => {
-        state = newState
-        rerender()
+        if (newState !== state[CURSOR]) {
+            state[CURSOR] = newState
+            stateCursor = 0
+            rerender()
+        }
     }
-    return [state, setState]
+    return [state[CURSOR], setState]
 }
